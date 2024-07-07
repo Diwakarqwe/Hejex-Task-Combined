@@ -36,7 +36,6 @@
 
                if(ifElseName){
                var userInput=ifElseName.toLowerCase();
-               console.log(userInput.length + userInput);
             
                // Hide all the links
                var allLinks=document.querySelectorAll('a');
@@ -64,14 +63,10 @@
                     document.write( '<label>Your Name:</label> ' +(ifElsePname.toUpperCase()) + '<marquee> మీకు ఆంధ్రప్రదేశ్ స్వాగతం </marquee>')
                 }
 
-                else if(userInput === userInput.length < 16){
+                else (userInput === userInput.length < 16){
                     document.write('I think you are coming from north indian state')
                 }
-
-                else{
-                    document.write('please enter any fields');
-                }
-            }
+           }
                 
         </script>
     </body>
