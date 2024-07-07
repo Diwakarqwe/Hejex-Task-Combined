@@ -1,0 +1,205 @@
+<html>
+    <head>
+        <title>Function</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">        
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">    
+                    <h2>To see the image by click the button</h2>
+                    <button onclick="window.location.href='../index.html';">Main Menu</button>
+                    <center>
+                        <img src="hey what'sup img.webp" alt="Hello" class="img-responsive">
+                    </center>
+                    <div class="button">
+                        <button onclick="imageShow()">Show</button>
+                        <button onclick="imageHide()">Hide</button>
+                    </div>
+                </div>    
+            </div>
+            <br>
+            <hr style="border: 1px solid black">
+
+            <div class="row">
+                <h2> to know what integer Odd or Even</h2>
+                <form onsubmit="return checkOddEven()">
+                    <input type="text" id="numberInput" placeholder="enter your number">
+                    <input type="submit" class="calculator" style="font-weight: 500;">
+                </form>
+                <br>
+                <hr style="border: 1px solid black">
+
+                <div class="col-lg-4 col-md-4"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <center>
+                <h2>Mini calculator</h2>    
+                <form>
+                    <input type="text" id="inputCal1" class="form-control">
+                    <br>
+                    <input type="text" id="inputCal2" class="form-control">
+                    <input type="submit" class="calculator" value="+" onclick="return myCalculatorAdd()">
+                    <input type="submit" class="calculator" value="-" onclick="return myCalculatorSub()">
+                    <input type="submit" class="calculator" value="*" onclick="return myCalculatorMul()">
+                    <input type="submit" class="calculator" value="/" onclick="return myCalculatorDiv()">
+                    <input type="submit" class="calculator" value="%" onclick="return myCalculatorMod()">
+                </form>
+                </center>
+                </div>
+                <div class="col-lg-4 col-md-4"></div> 
+
+            </div>
+        </div>
+
+        <script>
+                // default we hide the image
+                var imageFunction = document.querySelectorAll('img');
+                 imageFunction.forEach(function(image){
+                   image.classList.add('hidden');
+                })
+
+                // by clicking show it will show the image
+                 var imageShow =()=>{
+                     imageFunction.forEach(function(image){
+                        image.classList.remove('hidden');
+                     })
+                }
+
+                // by clicking hide it will remains default state(hide)
+                var imageHide = ()=>{
+                    imageFunction.forEach(function(image){
+                       image.classList.add('hidden');
+                    })
+                }
+
+                //number function
+
+                function checkOddEven(){
+                    var inputGet=document.getElementById('numberInput').value;
+                    
+                    var inputResult=parseInt(inputGet);
+                
+                    if(inputGet == null || inputGet == ""){
+                        alert('Please Enter any value');
+                        return false;
+                    }
+
+                    else if(inputResult % 2 == 0){
+                        alert('You Entered Even Number');
+                        return true;
+                    }
+
+                    else{
+                        alert('You Entered Odd Number');
+                        return true;
+                    }
+                     
+                }
+
+                //prototype calculator
+
+                function myCalculatorAdd(){
+
+                    var inputGetCal1=document.getElementById('inputCal1').value;
+                    var inputGetCal2=document.getElementById('inputCal2').value;
+                    
+                    var inputResultCal1=parseInt(inputGetCal1);
+                    var inputResultCal2=parseInt(inputGetCal2);
+
+                    var inputFinalCal1=inputResultCal1 + inputResultCal2;
+
+                    if(inputGetCal1 == '' || inputGetCal2==''){
+                        alert('Enter the Correct Value')
+                        return false;
+                    }
+
+                    else{
+                        alert( (inputFinalCal1) + ' is Your Addition Value');
+                    }                    
+                }
+
+                function myCalculatorSub(){
+                    var inputGetCal1=document.getElementById('inputCal1').value;
+                    var inputGetCal2=document.getElementById('inputCal2').value;
+                    
+                    var inputResultCal1=parseInt(inputGetCal1);
+                    var inputResultCal2=parseInt(inputGetCal2);
+
+                    var inputFinalCal2=inputResultCal1 - inputResultCal2;
+
+                    if(inputGetCal1 == '' || inputGetCal2==''){
+                        alert('Enter the Correct Value')
+                        return false;
+                    }
+
+                    else{
+                        alert((inputFinalCal2) + ' is Your Subtraction Value');
+                    }
+                }
+
+                function myCalculatorMul(){
+                    var inputGetCal1=document.getElementById('inputCal1').value;
+                    var inputGetCal2=document.getElementById('inputCal2').value;
+                    
+                    var inputResultCal1=parseInt(inputGetCal1);
+                    var inputResultCal2=parseInt(inputGetCal2);
+
+                    var inputFinalCal3=inputResultCal1 * inputResultCal2;
+
+                    if(inputGetCal1 == '' || inputGetCal2==''){
+                        alert('Enter the Correct Value')
+                        return false;
+                    }
+
+                    else{
+                        alert((inputFinalCal3) + ' is Your Multiplication Value');
+                    }
+                }
+    
+
+                function myCalculatorDiv(){
+                    var inputGetCal1=document.getElementById('inputCal1').value;
+                    var inputGetCal2=document.getElementById('inputCal2').value;
+                    
+                    var inputResultCal1=parseInt(inputGetCal1);
+                    var inputResultCal2=parseInt(inputGetCal2);
+
+                    var inputFinalCal4=inputResultCal1 / inputResultCal2;
+
+                    if(inputGetCal1 == '' || inputGetCal2==''){
+                        alert('Enter the Correct Value')
+                        return false;
+                    }
+
+                    else{
+                        alert((inputFinalCal4) + ' is Your Remainder Value');
+                    }
+                }
+
+                function myCalculatorMod(){
+                    var inputGetCal1=document.getElementById('inputCal1').value;
+                    var inputGetCal2=document.getElementById('inputCal2').value;
+                    
+                    var inputResultCal1=parseInt(inputGetCal1);
+                    var inputResultCal2=parseInt(inputGetCal2);
+
+                    var inputFinalCal5=inputResultCal1 % inputResultCal2;
+
+                    if(inputGetCal1 == '' || inputGetCal2==''){
+                        alert('Enter the Correct Value')
+                        return false;
+                    }
+
+                    else{
+                        alert((inputFinalCal5) + ' is Your Modulus Value');
+                    }
+                }
+        </script>
+    </body>
+</html>

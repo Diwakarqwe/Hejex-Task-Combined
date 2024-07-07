@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>If-Else</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../style.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+               .hidden{
+                text-decoration : none;
+                display: none;
+               }
+        </style>
+    </head>
+
+    <body>
+        <div>
+             <h2>check the result(If.,Else)</h2>
+             <button onclick="window.location.href='../index.html';">Main Menu</button>
+             <br>
+
+             <!-- below code class name 'hidden' is pre-defined name to hide element.It is bootstrap class name-->
+
+             <a class="karnatakaLink hidden"   href="https://www.britannica.com/place/Karnataka-state-India" target="_blank"> <label style="color: black; text-decoration: none;">to know your state:</label>know more</a>
+             <a class="tamilnaduLink hidden"   href="https://www.britannica.com/place/Tamil-Nadu" target="_blank"> <label style="color: black; text-decoration: none;">to know your state:</label>know more</a>
+             <a class="keralaLink hidden"      href="https://www.britannica.com/place/Kerala" target="_blank"> <label style="color: black; text-decoration: none;">to know your state:</label>know more</a>
+             <a class="andhraPradeshLink hidden" href="https://www.britannica.com/place/Andhra-Pradesh"  target="_blank"> <label style="color: black; text-decoration: none;">to know your state:</label>know more</a>
+        </div>
+
+        <script>
+            
+               var ifElsePname=prompt('Your Name ?'); 
+               var ifElseName=prompt('Your State ?');
+
+               if(ifElseName){
+               var userInput=ifElseName.toLowerCase();
+               console.log(userInput.length + userInput);
+            
+               // Hide all the links
+               var allLinks=document.querySelectorAll('a');
+               allLinks.forEach(function(link){
+                link.classList.add('hidden');
+               })
+
+               // condition for showing a link
+
+               if(userInput === 'tamil nadu' || userInput === 'tamilnadu'){
+                  document.querySelector('.tamilnaduLink').classList.remove('hidden');
+                  document.write( '<label>Your Name:</label> ' +(ifElsePname.toUpperCase()) + "<marquee> தமிழ்நாடு உங்களை வரவேற்கிறது </marquee>")
+                }
+
+                else if(userInput === 'kerala'){
+                    document.querySelector('.keralaLink').classList.remove('hidden');
+                    document.write( '<label>Your Name:</label> ' +(ifElsePname.toUpperCase()) + '<marquee> ഹലോ, നിങ്ങൾക്ക് സുഖമാണോ </marquee>')
+                }
+                else if(userInput === 'karnataka'){
+                    document.querySelector('.karnatakaLink').classList.remove('hidden');
+                    document.write( '<label>Your Name:</label> ' +(ifElsePname.toUpperCase()) + '<marquee> ಕರ್ನಾಟಕ ನಿಮಗೆ ಸ್ವಾಗತ </marquee>')
+                }
+                else if(userInput === 'andhra pradesh' || userInput === 'andhrapradesh'){
+                    document.querySelector('.andhraPradeshLink').classList.remove('hidden');
+                    document.write( '<label>Your Name:</label> ' +(ifElsePname.toUpperCase()) + '<marquee> మీకు ఆంధ్రప్రదేశ్ స్వాగతం </marquee>')
+                }
+
+                else if(userInput === userInput.length < 16){
+                    document.write('I think you are coming from north indian state')
+                }
+
+                else{
+                    document.write('please enter any fields');
+                }
+            }
+                
+        </script>
+    </body>
+</html>

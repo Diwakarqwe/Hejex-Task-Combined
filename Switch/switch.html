@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Switch Case</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../style.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <h2>check the result(switch)</h2>
+        <button onclick="window.location.href='../index.html';">Main Menu</button>
+         <script>
+                var cars=prompt('Car Name:')
+                var carResult=cars.toLowerCase();
+                switch(carResult){
+                    case  'bmw' :
+                    document.write( (cars).toUpperCase() + '  was invented by  Karl Friedrich Rapp  ');
+                    break;
+                    case 'audi' :
+                    document.write((cars).toUpperCase() + ' was invented by August Horch');
+                    break;
+                    case 'benz':
+                    document.write( (cars).toUpperCase() + ' was invented by Friedrich Benz');  
+                    break;  
+                    default : 
+                    document.write((cars).toUpperCase() + ' by clicking here you know more about your car <a href="https://www.google.com/index.html">know more</a> ');       
+                }
+         </script>
+    </body>
+</html>

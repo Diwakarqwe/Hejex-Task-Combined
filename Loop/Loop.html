@@ -1,0 +1,33 @@
+<html>
+    <head>
+          <title>Loop Concept</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width , initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+          <link rel="stylesheet" href="../style.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+          <h2>check the result using loop for Multiplication table</h2>
+          <button onclick="window.location.href='../index.html';">Main Menu</button>
+          <br>
+          
+            <script>
+                var result=prompt('Enter your number');
+                 function loopMultiplication(num){
+                    document.write(`Multiplication Table for ${num}:` + '<br>');
+
+                    
+                    for(let i = 1; i <= 10; i++){
+                        document.write(`${num} * ${i} = ${num * i}` + '<br>');
+                    }
+                 }
+
+                 // calling a function and which multiplication table number you or we want
+
+                 loopMultiplication(result);
+            </script>
+    </body>
+</html>

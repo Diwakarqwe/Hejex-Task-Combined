@@ -1,0 +1,57 @@
+body{
+    text-transform: capitalize;
+    background-color: beige;
+}
+
+body > h2{
+    text-align: center;
+}
+
+
+
+
+ /* function file CSS*/
+
+img{
+    margin-bottom:20px;
+  }
+
+  h2, .button, form{
+    text-align: center;
+  }
+
+  button{
+     background-color: orange;
+     color:black;
+     border: none;
+     padding:5px 15px 5px 15px;
+     border-radius: 10px;
+  }
+
+  button:hover{
+    background-color: black;
+    color:white;
+    border: none;
+  }
+
+  img{
+    width:400px;
+    height:400px;
+  }
+
+  .calculator{
+    background-color: orange;
+    color:black;
+    padding:5px 15px 5px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .calculator:hover{
+    background-color: black;
+    color: white;
+    border: none;
+  }
